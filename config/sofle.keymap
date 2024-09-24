@@ -70,19 +70,18 @@
         };
     };
 };
-
 / {
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1 &encoder_2>;
+        sensors = <&left_encoder &right_encoder>;
     };
 };
 
-&nice_view_spi {
-    cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+&left_encoder {
+    status = "okay";
 };
 
-&nice_view {
+&right_encoder {
     status = "okay";
 };
 
@@ -120,42 +119,8 @@
     };
 };
 
-&pro_micro_i2c {
-    status = "okay";
-
-    encoder_1: encoder_1 {
-        compatible = "alps,ec11";
-        label = "ENCODER_1";
-        a-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <4>;
-        status = "okay";
-    };
-
-    encoder_2: encoder_2 {
-        compatible = "alps,ec11";
-        label = "ENCODER_2";
-        a-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <4>;
-        status = "okay";
-    };
-};
-
 / {
     chosen {
-        zephyr,display = &nice_view;
-    };
-};
-
-&nice_view {
-    display_buffer = <&nv_display_buffer>;
-};
-
-/ {
-    nv_display_buffer: nv_display_buffer {
-        compatible = "zmk,nv-display-buffer";
-        label = "NV_DISPLAY_BUFFER";
-        size = <1024>;
+        zephyr,display = &oled;
     };
 };
