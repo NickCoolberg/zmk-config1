@@ -35,15 +35,43 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Undo {
+            bindings = <&kp K_UNDO>;
+            key-positions = <25 26>;
+            layers = <0>;
+        };
+
+        Cut {
+            bindings = <&kp K_CUT>;
+            key-positions = <26 27>;
+            layers = <0>;
+        };
+
+        Copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        Paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <28 40>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         colemak {
             bindings = <
 &kp LEFT_GUI  &kp EXCL  &kp AT        &kp HASH   &kp DLLR                &kp PRCNT                                             &kp CARET      &kp AMPS         &kp KP_MULTIPLY               &kp LPAR    &kp RPAR       &kp BACKSLASH
-&none         &kp Q     &kp W         &kp E      &kp R                   &kp T                                                 &kp Y          &kp U            &kp I                         &kp O       &kp P          &kp LEFT_BRACKET
+&kp TAB       &kp Q     &kp W         &kp E      &kp R                   &kp T                                                 &kp Y          &kp U            &kp I                         &kp O       &kp P          &kp LEFT_BRACKET
 &none         &kp A     &kp S         &kp D      &kp F                   &kp G                                                 &kp H          &kp J            &kp K                         &kp L       &kp SEMICOLON  &kp SQT
-&kp TAB       &kp Z     &kp X         &kp C      &kp V                   &kp B                 &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N          &kp M            &kp COMMA                     &kp PERIOD  &kp SLASH      &kp RIGHT_BRACKET
+&none         &kp Z     &kp X         &kp C      &kp V                   &kp B                 &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N          &kp M            &kp COMMA                     &kp PERIOD  &kp SLASH      &kp RIGHT_BRACKET
                         &kp LEFT_ALT  &kp LCTRL  &MomentStickyLayer 1 1  &mt LEFT_SHIFT SPACE  &kp ESCAPE    &kp ENTER         &BackDelMorph  &lt 2 RIGHT_ALT  &mt RIGHT_CONTROL LEFT_SHIFT  &tog 2
             >;
 
@@ -64,11 +92,11 @@
 
         movement {
             bindings = <
-&none             &none           &none           &none         &none            &none                                                &none   &none     &none           &none         &none            &none
-&none             &none           &mkp MCLK       &mkp RCLK     &mkp LCLK        &mwh SCROLL_VERT 10                                  &none   &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
-&kp LEFT_SHIFT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mwh SCROLL_VERT                                     &none   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT_CONTROL  &kp LEFT_ALT    &none           &none         &none            &none                &out OUT_TOG    &bt BT_CLR_ALL  &none   &kp N0    &none           &none         &none            &none
-                                  &trans          &trans        &to 0            &trans               &none           &trans          &trans  &trans    &trans          &trans
+&none             &none           &none           &none         &none            &none                                   &none   &none     &none           &none         &none            &none
+&none             &none           &mkp MCLK       &mkp RCLK     &mkp LCLK        &none                                   &none   &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
+&kp LEFT_SHIFT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none                                   &none   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&kp LEFT_CONTROL  &kp LEFT_ALT    &none           &none         &none            &none   &out OUT_TOG    &bt BT_CLR_ALL  &none   &kp N0    &none           &none         &none            &none
+                                  &trans          &trans        &to 0            &trans  &none           &trans          &trans  &trans    &trans          &trans
             >;
         };
     };
