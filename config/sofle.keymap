@@ -44,14 +44,14 @@
             layers = <0>;
         };
 
-        Copy {
-            bindings = <&kp LC(C)>;
+        Paste {
+            bindings = <&kp LC(V)>;
             key-positions = <27 26>;
             layers = <0>;
         };
 
-        Paste {
-            bindings = <&kp LC(V)>;
+        Copy {
+            bindings = <&kp LC(C)>;
             key-positions = <28 27>;
             layers = <0>;
         };
