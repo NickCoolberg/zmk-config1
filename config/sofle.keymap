@@ -33,6 +33,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        HoldSticky: HoldSticky {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDSTICKY";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+        };
     };
 
     combos {
@@ -40,19 +49,19 @@
 
         Cut {
             bindings = <&kp LC(X)>;
-            key-positions = <26 25>;
+            key-positions = <13 14>;
             layers = <0>;
         };
 
         Paste {
             bindings = <&kp LC(V)>;
-            key-positions = <27 26>;
+            key-positions = <26 27>;
             layers = <0>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
-            key-positions = <28 27>;
+            key-positions = <26 25>;
             layers = <0>;
         };
 
