@@ -40,7 +40,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
-            tapping-term-ms = <75>;
+            tapping-term-ms = <150>;
         };
 
         CopyPasteCutDance: CopyPasteCutDance {
@@ -48,6 +48,8 @@
             label = "COPYPASTECUTDANCE";
             #binding-cells = <0>;
             bindings = <&kp LC(C)>, <&kp LC(V)>, <&kp LC(X)>;
+
+            tapping-term-ms = <300>;
         };
     };
 
