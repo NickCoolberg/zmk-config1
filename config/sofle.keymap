@@ -39,6 +39,8 @@
             label = "BACKDELDANCE";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            tapping-term-ms = <250>;
         };
     };
 
