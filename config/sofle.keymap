@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PASTECOPYCUTDANCE";
             #binding-cells = <0>;
-            bindings = <&kp LC(V)>, <&kp LC(C)>, <&kp LC(X)>;
+            bindings = <&kp LC(B)>, <&kp LC(C)>, <&kp LC(X)>;
 
             tapping-term-ms = <220>;
         };
