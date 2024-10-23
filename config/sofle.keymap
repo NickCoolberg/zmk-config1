@@ -95,7 +95,7 @@
         };
 
         Paste {
-            bindings = <&kp LC(LS(D))>;
+            bindings = <&kp LC(B)>;
             key-positions = <26 27>;
         };
 
