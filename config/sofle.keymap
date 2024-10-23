@@ -40,7 +40,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(C)>, <&kp LC(X)>;
 
-            tapping-term-ms = <220>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -73,13 +73,8 @@
         };
 
         Paste {
-            bindings = <&kp LC(B)>;
+            bindings = <&kp LC(V)>;
             key-positions = <27 26>;
-        };
-
-        Paste2 {
-            bindings = <&kp K_PASTE>;
-            key-positions = <14 15>;
         };
     };
 
