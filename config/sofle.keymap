@@ -86,22 +86,36 @@
 
         Exlamation {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <32 33>;
+            key-positions = <21 22>;
+            layers = <0 1>;
+            timeout-ms = <100>;
         };
 
         Question {
-            bindings = <&kp QUESTION>;
+            bindings = <&kp LS(SLASH)>;
             key-positions = <33 34>;
+            layers = <0 1>;
         };
 
         Paste {
-            bindings = <&kp LC(B)>;
+            bindings = <&paste_macro>;
             key-positions = <26 27>;
+            layers = <0 1>;
         };
 
         CopyPasteDance {
             bindings = <&CopyCutDance>;
             key-positions = <38 39>;
+            layers = <0 1>;
+        };
+    };
+
+    macros {
+        paste_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+            label = "NEW_MACRO";
         };
     };
 
