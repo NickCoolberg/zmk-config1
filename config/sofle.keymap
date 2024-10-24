@@ -75,7 +75,7 @@
 
         Escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <27 28>;
+            key-positions = <>;
             layers = <0 1>;
         };
 
@@ -123,7 +123,7 @@
         question: question {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp QUESTION>;
+            bindings = <&kp LS(SLASH)>;
             label = "QUESTION";
         };
     };
