@@ -89,7 +89,7 @@
             bindings = <&kp EXCLAMATION>;
             key-positions = <25 26>;
             layers = <0 1>;
-            timeout-ms = <150>;
+            timeout-ms = <220>;
         };
 
         Question {
@@ -123,7 +123,7 @@
         question: question {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SLASH)>;
+            bindings = <&kp QUESTION>;
             label = "QUESTION";
         };
     };
