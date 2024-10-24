@@ -86,15 +86,16 @@
 
         Exlamation {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <21 22>;
+            key-positions = <25 26>;
             layers = <0 1>;
-            timeout-ms = <100>;
+            timeout-ms = <150>;
         };
 
         Question {
             bindings = <&question>;
             key-positions = <33 34>;
             layers = <0 1>;
+            timeout-ms = <150>;
         };
 
         Paste {
@@ -155,11 +156,11 @@
 
         movement {
             bindings = <
-&bootloader       &none                &none                 &none                &none               &studio_unlock                                  &none   &none     &none           &none         &none            &bootloader
-&none             &none                &mkp MCLK             &mkp RCLK            &mkp LCLK           &none                                           &none   &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
-&kp LEFT_SHIFT    &mmv MOVE_LEFT       &mmv MOVE_DOWN        &mmv MOVE_UP         &mmv MOVE_RIGHT     &none                                           &none   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&bootloader       &none           &none           &none         &none            &studio_unlock                                  &none   &none     &none           &none         &none            &bootloader
+&none             &none           &mkp MCLK       &mkp RCLK     &mkp LCLK        &none                                           &none   &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
+&kp LEFT_SHIFT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none                                           &none   &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
 &kp LEFT_CONTROL  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none           &out OUT_TOG    &bt BT_CLR_ALL  &none   &kp N0    &none           &none         &none            &none
-                                       &trans                &trans               &to 0               &trans          &trans          &trans          &trans  &trans    &trans          &trans
+                                  &trans          &trans        &to 0            &trans          &trans          &trans          &trans  &trans    &trans          &trans
             >;
         };
     };
