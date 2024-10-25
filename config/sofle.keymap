@@ -100,7 +100,7 @@
         };
 
         Paste {
-            bindings = <&kp LC(INSERT)>;
+            bindings = <&kp LS(INSERT)>;
             key-positions = <39 40>;
             layers = <0 1>;
         };
