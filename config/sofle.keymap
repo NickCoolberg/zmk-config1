@@ -100,8 +100,8 @@
         };
 
         Paste {
-            bindings = <&paste_macro>;
-            key-positions = <26 27>;
+            bindings = <&kp LC(INSERT)>;
+            key-positions = <39 40>;
             layers = <0 1>;
         };
 
@@ -113,17 +113,10 @@
     };
 
     macros {
-        paste_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(INSERT)>;
-            label = "NEW_MACRO";
-        };
-
         question: question {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(SLASH)>;
+            bindings = <&kp QMARK>;
             label = "QUESTION";
         };
     };
