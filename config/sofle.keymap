@@ -93,7 +93,7 @@
         };
 
         Question {
-            bindings = <&question>;
+            bindings = <&question2>;
             key-positions = <33 34>;
             layers = <0 1>;
             timeout-ms = <150>;
@@ -119,6 +119,19 @@
             bindings = <&kp QMARK>;
             label = "QUESTION";
         };
+        question2: question2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindinigs
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N3>
+                , <&macro_release &kp LALT>
+            ;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            label = "QUESTION2";
+        };
+
     };
 
     keymap {
