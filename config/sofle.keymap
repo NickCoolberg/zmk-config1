@@ -52,6 +52,103 @@
 
             tapping-term-ms = <300>;
         };
+
+        QuestionString: QuestionString {
+            compatible = "zmk,behavior-send-string";
+            label = "QUESTIONSTRING";
+            #binding-cells = <0>;
+            text = "?";
+        };
+
+        Num1TD: Num1TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM1TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num2TD: Num2TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM2TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp AT_SIGN>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num3TD: Num3TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM3TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_3>, <&kp HASH>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num4TD: Num4TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM4TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_4>, <&kp DOLLAR>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num5TD: Num5TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM5TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_5>, <&kp PERCENT>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num6TD: Num6TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM6TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_6>, <&kp CARET>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num7TD: Num7TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM7TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_7>, <&kp AMPERSAND>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num8TD: Num8TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM8TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_8>, <&kp ASTERISK>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num9TD: Num9TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM9TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_9>, <&kp LEFT_PARENTHESIS>;
+
+            tapping-term-ms = <180>;
+        };
+
+        Num0TD: Num0TD {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUM0TD";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_0>, <&kp RIGHT_PARENTHESIS>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -59,7 +156,7 @@
 
         dollar {
             bindings = <&kp DOLLAR>;
-            key-positions = <45 46>;
+            key-positions = <>;
             timeout-ms = <200>;
             layers = <0>;
         };
@@ -83,13 +180,6 @@
             timeout-ms = <220>;
         };
 
-        Question {
-            bindings = <&new_macro>;
-            key-positions = <33 34>;
-            layers = <0 1>;
-            timeout-ms = <150>;
-        };
-
         Paste {
             bindings = <&kp LS(INSERT)>;
             key-positions = <39 40>;
@@ -101,6 +191,11 @@
             key-positions = <38 39>;
             layers = <0 1>;
         };
+
+        Question {
+            bindings = <&question>;
+            key-positions = <33 34>;
+        };
     };
 
     macros {
@@ -110,38 +205,6 @@
             bindings = <&kp QMARK>;
             label = "QUESTION";
         };
-
-        question2: question2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N3>,
-                <&macro_release>,
-                <&kp LALT>;
-
-            wait-ms = <40>;
-            tap-ms = <40>;
-            label = "QUESTION2";
-        };
-
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N3>,
-                <&macro_release>,
-                <&kp LALT &kp LEFT_SHIFT>;
-
-            wait-ms = <40>;
-            tap-ms = <40>;
-            label = "NEW_MACRO";
-        };
     };
 
     keymap {
@@ -149,11 +212,11 @@
 
         colemak {
             bindings = <
-&kp LEFT_GUI    &kp EXCL  &kp AT        &kp HASH      &kp DLLR                  &kp PRCNT                                             &kp CARET      &kp AMPS  &kp KP_MULTIPLY  &kp LPAR         &kp RPAR       &kp BACKSLASH
-&kp TAB         &kp Q     &kp W         &kp E         &kp R                     &kp T                                                 &kp Y          &kp U     &kp I            &kp O            &kp P          &kp LEFT_BRACKET
-&CopyCutDance   &kp A     &kp S         &kp D         &kp F                     &kp G                                                 &kp H          &kp J     &kp K            &kp L            &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT  &kp Z     &kp X         &kp C         &kp V                     &kp B                 &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N          &kp M     &kp COMMA        &kp PERIOD       &kp SLASH      &kp RIGHT_BRACKET
-                          &kp LEFT_GUI  &kp LEFT_ALT  &KeyHoldTapLayer LCTRL 1  &mt LEFT_SHIFT SPACE  &kp ESCAPE    &kp ENTER         &kp BACKSPACE  &mo 2     &kp RIGHT_ALT    &kp RIGHT_SHIFT
+&kp LEFT_GUI    &Num1TD  &Num2TD       &Num3TD       &Num4TD                   &Num5TD                                               &Num6TD        &Num7TD  &Num8TD        &Num9TD          &Num0TD        &kp BACKSLASH
+&kp DELETE      &kp Q    &kp W         &kp E         &kp R                     &kp T                                                 &kp Y          &kp U    &kp I          &kp O            &kp P          &kp LEFT_BRACKET
+&kp TAB         &kp A    &kp S         &kp D         &kp F                     &kp G                                                 &kp H          &kp J    &kp K          &kp L            &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &kp Z    &kp X         &kp C         &kp V                     &kp B                 &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N          &kp M    &kp COMMA      &kp PERIOD       &kp SLASH      &kp RIGHT_BRACKET
+                         &kp LEFT_GUI  &kp LEFT_ALT  &KeyHoldTapLayer LCTRL 1  &mt LEFT_SHIFT SPACE  &kp ESCAPE    &kp ENTER         &kp BACKSPACE  &mo 2    &kp RIGHT_ALT  &kp RIGHT_SHIFT
             >;
 
             sensor-bindings =
@@ -163,11 +226,11 @@
 
         symbols {
             bindings = <
-&kp TILDE         &kp F1          &kp F2    &kp F3      &kp F4     &kp F5                          &kp F6      &kp F7            &kp F8             &kp F9                 &kp F10          &kp F11
-&caps_word        &kp N1          &kp N2    &kp N3      &kp N4     &kp N5                          &kp N6      &kp N7            &kp N8             &kp N9                 &kp N0           &kp BACKSLASH
-&kp LEFT_SHIFT    &kp UNDERSCORE  &kp PLUS  &kp EQUAL   &kp MINUS  &kp GRAVE                       &kp PERIOD  &kp GREATER_THAN  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp PIPE
-&kp LEFT_CONTROL  &kp LEFT_ALT    &trans    &caps_word  &kp TILDE  &kp LEFT_GUI  &none     &none   &none       &kp LESS_THAN     &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &none
-                                  &trans    &trans      &to 0      &trans        &trans    &trans  &trans      &trans            &trans             &trans
+&kp TILDE       &kp F1           &kp F2       &kp F3      &kp F4      &kp F5                          &kp F6      &kp F7            &kp F8             &kp F9                &kp F10                &kp F11
+&caps_word      &kp EXCLAMATION  &kp AT_SIGN  &kp HASH    &kp DOLLAR  &kp PERCENT                     &kp CARET   &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&trans          &kp UNDERSCORE   &kp PLUS     &kp EQUAL   &kp MINUS   &kp GRAVE                       &kp PERIOD  &kp GREATER_THAN  &kp LEFT_BRACKET   &kp LEFT_BRACE        &kp LEFT_BRACE         &kp PIPE
+&kp LEFT_SHIFT  &kp LEFT_ALT     &trans       &caps_word  &kp TILDE   &kp LEFT_GUI  &none     &none   &none       &kp LESS_THAN     &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp RIGHT_BRACE        &none
+                                 &kp LCTRL    &trans      &to 0       &trans        &trans    &trans  &trans      &trans            &trans             &trans
             >;
         };
 
