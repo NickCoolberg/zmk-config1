@@ -193,7 +193,7 @@
         };
 
         Question {
-            bindings = <&question>;
+            bindings = <&QuestionString>;
             key-positions = <33 34>;
         };
     };
