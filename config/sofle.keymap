@@ -53,15 +53,6 @@
             tapping-term-ms = <300>;
         };
 
-        QuestionString: QuestionString {
-            compatible = "zmk,behavior-send-string";
-            label = "QUESTIONSTRING";
-            #binding-cells = <0>;
-            text = "?";
-            charmap =
-            0x003F;
-        };
-
         Num1TD: Num1TD {
             compatible = "zmk,behavior-tap-dance";
             label = "NUM1TD";
@@ -204,7 +195,7 @@
         };
 
         Question {
-            bindings = <&QuestionString>;
+            bindings = <&none>;
             key-positions = <33 34>;
         };
     };
