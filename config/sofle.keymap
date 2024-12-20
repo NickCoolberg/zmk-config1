@@ -62,7 +62,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num2TD: Num2TD {
@@ -71,7 +71,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_2>, <&kp AT_SIGN>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num3TD: Num3TD {
@@ -80,7 +80,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_3>, <&kp HASH>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num4TD: Num4TD {
@@ -89,7 +89,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_4>, <&kp DOLLAR>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num5TD: Num5TD {
@@ -98,7 +98,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_5>, <&kp PERCENT>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num6TD: Num6TD {
@@ -107,7 +107,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_6>, <&kp CARET>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num7TD: Num7TD {
@@ -116,7 +116,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_7>, <&kp AMPERSAND>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num8TD: Num8TD {
@@ -125,7 +125,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_8>, <&kp ASTERISK>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num9TD: Num9TD {
@@ -134,7 +134,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_9>, <&kp LEFT_PARENTHESIS>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         Num0TD: Num0TD {
@@ -143,7 +143,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_0>, <&kp RIGHT_PARENTHESIS>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
         };
 
         ShiftSpaceKey: ShiftSpaceKey {
